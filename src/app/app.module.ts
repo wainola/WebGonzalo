@@ -6,12 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { HeaderSiteComponent } from './header-site.component';
 import { ClasesComponent } from './clases/clases.component';
+import { AsignaturasComponent } from './clases/asignaturas/asignaturas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderSiteComponent,
-    ClasesComponent
+    ClasesComponent,
+    AsignaturasComponent
   ],
   imports: [
     BrowserModule,
