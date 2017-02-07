@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { HeaderSiteComponent } from './header-site.component';
 import { ClasesComponent } from './clases/clases.component';
 import { AsignaturasComponent } from './clases/asignaturas/asignaturas.component';
+import { ListaAsignaturasComponent } from './clases/asignaturas/lista-asignaturas/lista-asignaturas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderSiteComponent,
     ClasesComponent,
-    AsignaturasComponent
+    AsignaturasComponent,
+    ListaAsignaturasComponent
   ],
   imports: [
     BrowserModule,

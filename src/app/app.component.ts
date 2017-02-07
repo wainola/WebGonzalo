@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HeaderSiteComponent } from './header-site.component';
+import { ClasesComponent } from './clases';
 
 @Component({
   selector: 'app-root',
