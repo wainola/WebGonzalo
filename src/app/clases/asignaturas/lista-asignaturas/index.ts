@@ -1,1 +1,1 @@
-export { Asignaturas } from './asignaturas';
+export { Asignatura } from './asignaturas';

@@ -1,19 +1,21 @@
-import { Component, OnInit } from '@angular/core';
-import { Asignaturas } from './asignaturas';
+import { Component  } from '@angular/core';
+import { Asignatura } from './asignaturas';
 
 @Component({
   selector: 'app-lista-asignaturas',
-  templateUrl: './lista-asignaturas.component.html',
-  styles: []
+  templateUrl: './lista-asignaturas.component.html'
 })
-export class ListaAsignaturasComponent implements OnInit {
-  //declaramos atributo del tipo curso para hacer el arreglo de cursos.
-  cursos: Asignaturas[] = [];
-  curso = new Asignaturas("Ramo 1");
-
-  constructor() {}
-
-  ngOnInit() {
-  }
-
+export class ListaAsignaturasComponent{
+  // creamos la propiedad para que este presta para ser renderizada.
+  cursos = CURSOS;
 }
+
+// generamos las instancias de los cursos.
+const CURSOS: Asignatura[] = [
+  new Asignatura("Calculo Vectorial", "lunes a viernes", "Gonzalo Vera", "Camilo Riquelme", "Nicolas Riquelme"),
+  new Asignatura("Cuerpos voladores", "Lunes a viernes", "Carpacio Dapadocia", "Mario Jimenez", "Marco Aurelio Cota")
+]
+
+
+
+

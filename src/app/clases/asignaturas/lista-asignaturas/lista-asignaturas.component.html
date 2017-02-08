@@ -1,3 +1,20 @@
-<p>
-  {{curso.cursos}}
-</p>
+<table class="table table-hover table-bordered">
+  <thead>
+    <tr>
+      <th>Curso</th>
+      <th>Horario</th>
+      <th>Instructor</th>
+      <th>Partner</th>
+      <th>Observadores</th>
+      <th>Informacion extra</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let clases of cursos">
+      <td>{{clases.curso}}</td>
+      <td>{{clases.horario}}</td>
+      <td>{{clases.instructor}}</td>
+      <td>{{clases.partner}}</td>
+      <td>{{clases.observadores}}</td>
+      <td>{{clases.infoExtra}}</td>
+  </tbody>
+</table>
