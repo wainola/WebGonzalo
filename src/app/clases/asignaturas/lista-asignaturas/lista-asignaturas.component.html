@@ -10,7 +10,8 @@
       <th>Chequeado</th>
     </tr>
   </thead>
-  <tbody *ngFor="let clases of cursos">
+  <tbody>
+    <tr *ngFor="let clases of cursos" class="{{clases.aplicacionClase()}}">
       <td>{{clases.curso}}</td>
       <td>{{clases.horario}}</td>
       <td>{{clases.instructor}}</td>
@@ -18,7 +19,8 @@
       <td>{{clases.observadores}}</td>
       <td>{{clases.infoExtra}}</td>
       <td class="text-center">
-        <input type="checkbox">
+        <input type="checkbox" [(ngModel)]="clases.chequeado" (mouseenter)="clases.getChequeo()">
       </td>
+    </tr>
   </tbody>
 </table>

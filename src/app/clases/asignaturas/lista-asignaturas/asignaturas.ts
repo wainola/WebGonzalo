@@ -20,7 +20,6 @@ export class Asignatura implements Asignaturas{
   observadores: string;
   infoExtra?: string;
   chequeado: boolean;
-  @Input() check: boolean = false;
   constructor(curso, horario, instructor, partner, observadores, infoExtra?, chequeado:boolean = false){
     if(infoExtra === undefined){
       this.curso = curso;
@@ -53,5 +52,17 @@ export class Asignatura implements Asignaturas{
 
   chequeoBox(ar1:boolean){
     this.chequeado = ar1;
+  }
+  getChequeo(){
+    console.log(this.chequeado);
+  }
+  aplicacionClase(){
+    if(this.chequeado){
+      let clase = "table-success";
+      return clase;
+    }else{
+      let clase = "table-danger";
+      return clase;
+    }
   }
 }

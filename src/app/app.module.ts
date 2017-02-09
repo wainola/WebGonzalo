@@ -8,6 +8,8 @@ import { HeaderSiteComponent } from './header-site.component';
 import { ClasesComponent } from './clases/clases.component';
 import { AsignaturasComponent } from './clases/asignaturas/asignaturas.component';
 import { ListaAsignaturasComponent } from './clases/asignaturas/lista-asignaturas/lista-asignaturas.component';
+import { EjemploDirectivasComponent } from './ejemplo-directivas/ejemplo-directivas.component';
+import { EjemploDirectivaDirective } from './ejemplo-directivas/ejemplo-directiva.directive';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { ListaAsignaturasComponent } from './clases/asignaturas/lista-asignatura
     ClasesComponent,
     AsignaturasComponent,
     ListaAsignaturasComponent,
+    EjemploDirectivasComponent,
+    EjemploDirectivaDirective,
   ],
   imports: [
     BrowserModule,
