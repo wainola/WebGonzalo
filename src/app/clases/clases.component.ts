@@ -1,15 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Directive, ElementRef, Input } from '@angular/core';
 
 @Component({
   selector: 'app-clases',
   templateUrl: './clases.component.html',
   styles: []
 })
-export class ClasesComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class ClasesComponent {
 }

@@ -7,6 +7,7 @@
       <th>Partner</th>
       <th>Observadores</th>
       <th>Informacion extra</th>
+      <th>Chequeado</th>
     </tr>
   </thead>
   <tbody *ngFor="let clases of cursos">
@@ -16,5 +17,8 @@
       <td>{{clases.partner}}</td>
       <td>{{clases.observadores}}</td>
       <td>{{clases.infoExtra}}</td>
+      <td class="text-center">
+        <input type="checkbox">
+      </td>
   </tbody>
 </table>

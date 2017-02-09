@@ -1,3 +1,4 @@
+import { Input } from '@angular/core';
 // implementacion de interfaz de asignaturas para determinar atributos.
 interface Asignaturas{
   curso: string;
@@ -6,7 +7,9 @@ interface Asignaturas{
   partner: string;
   observadores: string;
   infoExtra?: string;
+  chequeado: boolean;
   impresionInfo();
+  chequeoBox(ar1:boolean);
 }
 
 export class Asignatura implements Asignaturas{
@@ -16,14 +19,17 @@ export class Asignatura implements Asignaturas{
   partner: string;
   observadores: string;
   infoExtra?: string;
-  constructor(curso, horario, instructor, partner, observadores, infoExtra?){
+  chequeado: boolean;
+  @Input() check: boolean = false;
+  constructor(curso, horario, instructor, partner, observadores, infoExtra?, chequeado:boolean = false){
     if(infoExtra === undefined){
       this.curso = curso;
       this.horario = horario;
       this.instructor = instructor;
       this.partner = partner;
       this.observadores = observadores;
-      this.infoExtra = "No se ha añadido.";
+      this.infoExtra = "-";
+      this.chequeado = chequeado;
     } else {
       this.curso = curso;
       this.horario = horario;
@@ -31,8 +37,10 @@ export class Asignatura implements Asignaturas{
       this.partner = partner;
       this.observadores = observadores;
       this.infoExtra = infoExtra;
+      this.chequeado = chequeado;
     }
   }
+
   impresionInfo(){
     console.log(`
     Curso: ${this.curso}.
@@ -40,6 +48,10 @@ export class Asignatura implements Asignaturas{
     Instructor: ${this.instructor}.
     Observadores: ${this.observadores}.
     Informacion Extra: ${this.infoExtra}
-    `)
+    `);
+  }
+
+  chequeoBox(ar1:boolean){
+    this.chequeado = ar1;
   }
 }

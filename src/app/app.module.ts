@@ -15,7 +15,7 @@ import { ListaAsignaturasComponent } from './clases/asignaturas/lista-asignatura
     HeaderSiteComponent,
     ClasesComponent,
     AsignaturasComponent,
-    ListaAsignaturasComponent
+    ListaAsignaturasComponent,
   ],
   imports: [
     BrowserModule,
