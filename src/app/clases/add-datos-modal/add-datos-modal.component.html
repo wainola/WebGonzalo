@@ -8,11 +8,13 @@
   </div>
   <div class="modal-body">
     <div class="input-group">
-      <input type="text" class="form-control" placeholder="Curso" aria-describedby="basic-addon1">
+      <input  id="curso" type="text" class="form-control" placeholder="Curso" aria-describedby="basic-addon1" [(ngModel)]="modal.curso" name="curso" #spy required>
+      {{spy.className}}
     </div>
     <br>
     <div class="input-group">
-      <input type="text" class="form-control" placeholder="Horario" aria-describedby="basic-addon1">
+      <input id="horario" type="text" class="form-control" placeholder="Horario" aria-describedby="basic-addon1" [(ngModel)]="modal.horario" name="horario">
+      {{modal.horario}}
     </div>
     <br>
     <div class="input-group">
@@ -32,6 +34,7 @@
     </div>
   </div>
   <div class="modal-footer">
+    <button type="button" class="btn btn-success" (click)="newModal()">Añadir</button>
     <button type="button" class="btn btn-secondary" (click)="c('Close click')">Cerrar</button>
   </div>
 </template>

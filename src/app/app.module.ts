@@ -12,7 +12,6 @@ import { ListaAsignaturasComponent } from './clases/asignaturas/lista-asignatura
 import { EjemploDirectivasComponent } from './ejemplo-directivas/ejemplo-directivas.component';
 import { EjemploDirectivaDirective } from './ejemplo-directivas/ejemplo-directiva.directive';
 import { AddDatosModalComponent } from './clases/add-datos-modal/add-datos-modal.component';
-import { NgbdModalBasicComponent } from './clases/add-datos-modal/ngbd-modal-basic.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +23,6 @@ import { NgbdModalBasicComponent } from './clases/add-datos-modal/ngbd-modal-bas
     EjemploDirectivasComponent,
     EjemploDirectivaDirective,
     AddDatosModalComponent,
-    NgbdModalBasicComponent,
   ],
   imports: [
     BrowserModule,
