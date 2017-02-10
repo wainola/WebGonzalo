@@ -1,0 +1,39 @@
+<!-- Hay que añadir la directiva ngbModalContainer si no el modal no funciona -->
+<template ngbModalContainer #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Añadir alumnos</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Curso" aria-describedby="basic-addon1">
+    </div>
+    <br>
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Horario" aria-describedby="basic-addon1">
+    </div>
+    <br>
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Instructor" aria-describedby="basic-addon1">
+    </div>
+    <br>
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Partner" aria-describedby="basic-addon1">
+    </div>
+    <br>
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Observadores" aria-describedby="basic-addon1">
+    </div>
+    <br>
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Información Extra" aria-describedby="basic-addon1">
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="c('Close click')">Cerrar</button>
+  </div>
+</template>
+
+<button class="btn btn-primary" (click)="open(content)">Añadir alumnos</button>

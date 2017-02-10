@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { HeaderSiteComponent } from './header-site.component';
@@ -10,6 +11,8 @@ import { AsignaturasComponent } from './clases/asignaturas/asignaturas.component
 import { ListaAsignaturasComponent } from './clases/asignaturas/lista-asignaturas/lista-asignaturas.component';
 import { EjemploDirectivasComponent } from './ejemplo-directivas/ejemplo-directivas.component';
 import { EjemploDirectivaDirective } from './ejemplo-directivas/ejemplo-directiva.directive';
+import { AddDatosModalComponent } from './clases/add-datos-modal/add-datos-modal.component';
+import { NgbdModalBasicComponent } from './clases/add-datos-modal/ngbd-modal-basic.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +23,14 @@ import { EjemploDirectivaDirective } from './ejemplo-directivas/ejemplo-directiv
     ListaAsignaturasComponent,
     EjemploDirectivasComponent,
     EjemploDirectivaDirective,
+    AddDatosModalComponent,
+    NgbdModalBasicComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    NgbModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
