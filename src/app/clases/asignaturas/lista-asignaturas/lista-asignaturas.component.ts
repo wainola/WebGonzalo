@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Asignatura } from './asignaturas';
 
 @Component({
@@ -8,6 +8,11 @@ import { Asignatura } from './asignaturas';
 export class ListaAsignaturasComponent{
   // creamos la propiedad para que este presta para ser renderizada.
   cursos = CURSOS;
+  @Input() elementoSelec: Asignatura;
+  elementoSeleccionado(par1){
+    this.elementoSelec = par1;
+    console.log(this.elementoSelec);
+  }
 }
 
 // generamos las instancias de los cursos.

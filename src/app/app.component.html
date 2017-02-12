@@ -1,30 +1,15 @@
 <app-header-site></app-header-site>
-
 <div class="container-fluid">
   <div class="row">
-    <div class="col-sm-4 col-md-4 col-lg-4">
-      <h1 class="display-3 text-center">Dashboard</h1>
-    </div>
-    <div class="col-lg-8 col-md-8 col-xs-8">
-      <br>
-      <h1 class="display-3 text-center">Clases</h1>
+    <div class="col">
       <app-clases></app-clases>
-      <br>
+    </div>
+    <div class="col">
+      <div class="card card-outline-primary mt-3 text-center" hidden="true">
+      <div class="card-block">
+        <app-datos-alumnos></app-datos-alumnos>
+      </div>
+      </div>
     </div>
   </div>
 </div>
-
-<!-- elemento Card Bootstrap 4 -->
-<!--<div class="card text-center" hidden="true">
-  <div class="card-header">
-    Featured
-  </div>
-  <div class="card-block">
-    <h4 class="card-title">Special title treatment</h4>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-  <div class="card-footer text-muted">
-    2 days ago
-  </div>
-</div>-->

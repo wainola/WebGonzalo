@@ -11,7 +11,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let clases of cursos" class="{{clases.aplicacionClase()}}">
+    <tr *ngFor="let clases of cursos" class="{{clases.aplicacionClase()}}" (click)="elementoSeleccionado(clases)">
       <td>{{clases.curso}}</td>
       <td>{{clases.horario}}</td>
       <td>{{clases.instructor}}</td>
