@@ -7,7 +7,7 @@ import { Asignatura } from './asignaturas';
 })
 export class ListaAsignaturasComponent{
   // creamos la propiedad para que este presta para ser renderizada.
-  cursos = CURSOS;
+  @Input() cursos = CURSOS;
   @Input() elementoSelec: Asignatura;
   elementoSeleccionado(par1){
     this.elementoSelec = par1;
