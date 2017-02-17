@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+       <button type="button" class="btn btn-primary mt-3" (click)="mostrarCard(card)">Añadir datos</button>
+      <div class="card card-outline-primary mt-3" hidden #card>
+        <div class="card-block">
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Curso" #newCurso>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Horario" #newHorario>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Instructor" #newInstructor>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Partner" #newPartner>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Observadores" #newObservadores>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Informacion extra" #newInfoExtra>
+            </div>
+            <button type="button" class="btn btn-warning" (click)="addDatos(newCurso, newHorario, newInstructor, newPartner, newObservadores, newInfoExtra)">Añadir</button>
+          </form>
+        </div>
+      </div>
+      <div class="card card-outline-success mt-3">
+        <div class="card-block">
+          <h4>{{title}}</h4>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Curso</th>
+                <th>Horario</th>
+                <th>Instructor</th>
+                <th>Partner</th>
+                <th>Observadores</th>
+                <th>Informacion Extra</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let info of arregloCursos">
+                <td>{{info.curso}}</td>
+                <td>{{info.horario}}</td>
+                <td>{{info.instructor}}</td>
+                <td>{{info.partner}}</td>
+                <td>{{info.observadores}}</td>
+                <td>{{info.infoExtra}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
