@@ -55,3 +55,4 @@ export class DatosFormularioComponent{
     }
   }
 }
+// Por hacer: resolver el tema de la actualizacion del localStorage.
