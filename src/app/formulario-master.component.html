@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+
+      <button
+      type="button"
+      class="btn btn-primary mt-3"
+      (click)="muestraFormulario()"
+      >Añadir datos</button>
+
+      <button
+      class="btn btn-info mt-3"
+      type="button">
+      Alumnos</button>
+
+      <button
+      class="btn btn-success mt-3" 
+      type="button">
+      Cursos</button>
+
+      <!-- Interfaz de formulario-->
+      <div class="card card-outline-primary mt-3" *ngIf="escondido">
+        <div class="card-block">
+          <!-- Componentes personalizados referidos a todos los campos a llenar -->
+          <!--<app-curso-form></app-curso-form>-->
+          <app-datos-formulario></app-datos-formulario>
+        </div>
+      </div>
+
+      <div class="card card-outline-primary mt-3" *ngIf="!escondido">
+        <div class="card-block">
+          <app-consola-info></app-consola-info>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

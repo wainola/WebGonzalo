@@ -1,0 +1,22 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Curso</th>
+      <th>Horario</th>
+      <th>Instructor</th>
+      <th>Partner</th>
+      <th>Observadores</th>
+      <th>Informacion Extra</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of datosCarga">
+      <td>{{data.curso}}</td>
+      <td>{{data.horario}}</td>
+      <td>{{data.instructor}}</td>
+      <td>{{data.partner}}</td>
+      <td>{{data.observadores}}</td>
+      <td>{{data.infoExtra}}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,59 @@
+<form [formGroup]="formulario"
+(ngSubmit)="addDatos()">
+  <div class="form-group"
+  [ngClass]="{'has-error':!formulario.controls['curso'].valid}">
+    <input
+    type="text"
+    class="form-control has-error"
+    formControlName="curso"
+    placeholder="Curso"
+    >
+  </div>
+  <div class="form-group"
+  [ngClass]="{'has-error':!formulario.controls['horario'].valid}">
+    <input
+    type="text"
+    class="form-control"
+    formControlName="horario"
+    placeholder="horario"
+    >
+  </div>
+  <div class="form-group"
+  [ngClass]="{'has-error':!formulario.controls['instructor'].valid}">
+    <input
+    type="text"
+    class="form-control"
+    formControlName="instructor"
+    placeholder="Instructor"
+    >
+  </div>
+  <div class="form-group"
+  [ngClass]="{'has-error':!formulario.controls['partner'].valid}">
+    <input
+    type="text"
+    class="form-control"
+    formControlName="partner"
+    placeholder="Partner"
+    >
+  </div>
+  <div class="form-group"
+  [ngClass]="{'has-error':!formulario.controls['observadores'].valid}">
+    <input
+    type="text"
+    class="form-control"
+    formControlName="observadores"
+    placeholder="Observadores"
+    >
+  </div>
+  <div class="form-group"
+  [ngClass]="{'has-error':!formulario.controls['informacionExtra'].valid}">
+    <input
+    type="text"
+    class="form-control"
+    formControlName="informacionExtra"
+    placeholder="Informacion Extra"
+    >
+  </div>
+  <button type="submit" class="btn btn-success"[disabled]="!formulario.valid">Añadir</button>
+  <button type="button" class="btn btn-info" (click)="mostrarData()">Data to the Console!</button>
+</form>

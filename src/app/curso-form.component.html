@@ -1,0 +1,7 @@
+<form [formGroup]="form">
+  <div class="form-group">
+    <input type="text" class="form-control" formControlName="first">
+    <button type="button" class="btn btn-danger" (click)="enClick()">Click</button>
+  </div>
+</form>
+<p>{{form.value | json}}</p>
